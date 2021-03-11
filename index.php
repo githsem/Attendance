@@ -17,7 +17,7 @@
         </div>
         <div class="mb-3">
             <label for="dob" class="form-label">Date Of Birth</label>
-            <input type="date" class="form-control" id="dob">        
+            <input type="text" class="form-control" id="dob">        
         </div>
         <div class="mb-3">
             <label for="specialty" class="form-label">Area of Expertise</label>
