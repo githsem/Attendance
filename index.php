@@ -9,8 +9,19 @@
     <form>
         <div class="mb-3">
             <label for="firstname" class="form-label">First Name</label>
-            <input type="text" class="form-control" id="firstname">
-            
+            <input type="text" class="form-control" id="firstname">        
+        </div>
+        <div class="mb-3">
+            <label for="lastname" class="form-label">Last Name</label>
+            <input type="text" class="form-control" id="lastname">        
+        </div>
+        <div class="mb-3">
+            <label for="dob" class="form-label">Date Of Birth</label>
+            <input type="date" class="form-control" id="dob">        
+        </div>
+        <div class="mb-3">
+            <label for="specialty" class="form-label">Area of Expertise</label>
+            <input type="text" class="form-control" id="specialty">        
         </div>
         <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Password</label>
