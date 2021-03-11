@@ -21,15 +21,22 @@
         </div>
         <div class="mb-3">
             <label for="specialty" class="form-label">Area of Expertise</label>
-            <input type="text" class="form-control" id="specialty">        
+            <select class="form-select" id="specialty">
+                <option value="1">Database Admin </option>
+                <option value="2">Software Developer</option>
+                <option value="3">Web Administrator</option>
+                <option value="3">Other</option>
+            </select>       
         </div>
         <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1">
+            <label for="email" class="form-label">Email address</label>
+            <input type="text" class="form-control" id="phone" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
         </div>
-        <div class="mb-3 form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        <div class="mb-3">
+            <label for="phone" class="form-label">Contact Number</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="phoneHelp">
+            <div id="phone" class="form-text">We'll never share your number with anyone else.</div>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>  
     </form>
