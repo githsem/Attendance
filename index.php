@@ -25,7 +25,7 @@
         <div class="mb-3">
             <label for="specialty" class="form-label">Area of Expertise</label>
             <select class="form-select" id="specialty" name="specialty">
-                <option >Database Admin </option>
+                <option value="1">Database Admin </option>
                 <option >Software Developer</option>
                 <option >Web Administrator</option>
                 <option >Other</option>
