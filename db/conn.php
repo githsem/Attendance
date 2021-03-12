@@ -14,4 +14,7 @@
         throw new PDOException($e->getMessage());
     }
 
+    require_once 'crud.php';
+    $crud = new crud($pdo);
+
 ?>
