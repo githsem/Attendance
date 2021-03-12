@@ -9,7 +9,7 @@
 
         public function insert($fname, $lname, $dob, $email, $contact, $specialty){
             try {
-                $sql = "INSERT INTO attendee (firstname,lastname,dateofbirth,emailaddress,contactnumber,specialty_id) VALUES (:fname,:lname,:dob,:email,:contact,:specialty)";
+                $sql = "INSERT INTO attendee (firstname,lastname,dateofbirth,emailaddress,contactnumber,specialty_id)  VALUES (:fname,:lname,:dob,:email,:contact,:specialty)";
                 $stmt = $this->db->prepare($sql);
 
                 $stmt->bindparam(':fname',$fname);
@@ -21,7 +21,7 @@
 
                 $stmt->execute();
                 return true;
-                
+
             } catch (PDOException $e) {
                 echo $e->getMessage();
                 return false;
