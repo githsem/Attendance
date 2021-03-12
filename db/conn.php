@@ -9,7 +9,7 @@
 
     try{
         $pdo = new PDO($dsn,$user,$pass);
-        echo 'Hello Database';
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     }catch(PDOException $e){
         throw new PDOException($e->getMessage());
     }
