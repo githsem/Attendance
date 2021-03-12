@@ -6,7 +6,7 @@
     if(isset($_POST['submit'])){
         $fname = $_POST['firstname'];
         $lname = $_POST['lastname'];
-        $dob = $_POST['dateofbirth'];
+        $dob = $_POST['dob'];
         $email = $_POST['email'];
         $contact = $_POST['phone'];
         $specialty = $_POST['specialty'];
