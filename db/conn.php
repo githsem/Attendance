@@ -9,6 +9,7 @@
 
     try{
         $pdo = new PDO($dsn,$user,$pass);
+        echo 'Hello Database';
     }catch(PDOExceptions $e){
         throw new PDOException($e->getMessage());
     }
