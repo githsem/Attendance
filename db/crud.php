@@ -32,6 +32,14 @@
             $result = $this->db->query($sql);
             return $result;
         }
+
+        public function getSpecialties(){
+            $sql = "SELECT * FROM `specialties` ";
+            $result = $this->db->query($sql);
+            return $result;
+        }
+
+
     }
 
 ?>
