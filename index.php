@@ -3,6 +3,8 @@
 
     require_once "includes/header.php";
     require_once 'db/conn.php'; 
+
+    $results = $crud->getSpecialties();
 ?>
 
 
@@ -25,10 +27,10 @@
         <div class="mb-3">
             <label for="specialty" class="form-label">Area of Expertise</label>
             <select class="form-select" id="specialty" name="specialty">
-                <option value="1">Database Admin </option>
-                <option >Software Developer</option>
-                <option >Web Administrator</option>
-                <option >Other</option>
+                <?php while ($r = $results->fetch(PDO::FETCH_ASSOC)) { ?>
+                    <option value="<?php echo $r['specialty_id'] ?>"><?php echo $r['name']?></option>
+
+                <?php } ?>
             </select>       
         </div>
         <div class="mb-3">
