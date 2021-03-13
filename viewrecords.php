@@ -17,6 +17,7 @@
         <th>Email Address</th>
         <th>Contact Number</th>
         <th>Specialty</th>
+        <th>Actions</th>
     </tr>
     <?php while($r = $results->fetch(PDO::FETCH_ASSOC)) {?>
         <tr>
@@ -27,6 +28,7 @@
             <td><?php  echo $r['emailaddress']?></td>
             <td><?php  echo $r['contactnumber']?></td>
             <td><?php  echo $r['name']?></td>
+            <td><a href="view.php" class = ""></a></td>
         </tr>
 
     <?php } ?>
