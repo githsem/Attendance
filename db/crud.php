@@ -28,7 +28,7 @@
             }
         }
         public function getAttendees(){
-            $sql = "SELECT * FROM 'attendee'";
+            $sql = "SELECT * FROM `attendee` ";
             $result = $this->db->query($sql);
             return $result;
         }
