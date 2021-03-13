@@ -1,11 +1,11 @@
 <?php 
-    $title = 'Index';
+    $title = 'Wiew Records';
 
     require_once "includes/header.php";
     require_once 'db/conn.php'; 
 
     //Get all attendees
-    $results = $crud->getAttendees();
+    
 ?>
 
 
