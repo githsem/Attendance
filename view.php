@@ -5,6 +5,13 @@
     require_once 'db/conn.php'; 
 
     //Get all attendees
+    if(isset($_GET['id'])){
+        $id = $_GET['id'];
+        $result = $crud->getAttendeesDetails($id);
+
+    }else{
+        echo "<h1 class='test-danger'> Please check details and try again </h1>";
+    }
     
 ?>
 <div class="card" style="width: 18rem;">
