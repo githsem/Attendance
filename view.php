@@ -7,7 +7,7 @@
     //Get all attendees
     if(isset($_GET['id'])){
         $id = $_GET['id'];
-        $result = $crud->getAttendeesDetails($id);
+        $result = $crud->getAttendeeDetails($id);
 
     }else{
         echo "<h1 class='test-danger'> Please check details and try again </h1>";
@@ -23,13 +23,13 @@
                 <?php echo $result['specialty'];  ?>
             </h6>
             <p class="card-text">
-                Date Of Birth : <?php echo $result['dob'];  ?>
+                Date Of Birth : <?php echo $result['dateofbirth'];  ?>
             </p>
             <p class="card-text">
-                Email Adress : <?php echo $result['email'];  ?>
+                Email Adress : <?php echo $result['emailaddress'];  ?>
             </p>
             <p class="card-text">
-                Contact Number : <?php echo $result['phone'];  ?>
+                Contact Number : <?php echo $result['contactnumber'];  ?>
             </p>
         </div>
     </div>    
