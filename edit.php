@@ -5,6 +5,12 @@
     require_once 'db/conn.php'; 
 
     $results = $crud->getSpecialties();
+    if(!isset($_GET['id'])){
+        echo 'error';
+    }else{
+        $id = $_GET['id'];
+        $attendee = $crud->getAttendeeDetails();
+        
 ?>
 
 
@@ -50,7 +56,7 @@
     </form>
 
     
-
+    <?php } ?>  
 <?php require_once "includes/footer.php"; ?>    
     
 
