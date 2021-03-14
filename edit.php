@@ -9,7 +9,7 @@
         echo 'error';
     }else{
         $id = $_GET['id'];
-        $attendee = $crud->getAttendeeDetails();
+        $attendee = $crud->getAttendeeDetails($id);
         
 ?>
 
@@ -20,33 +20,35 @@
     <form method = "post" action="success.php">
         <div class="mb-3">
             <label for="firstname" class="form-label">First Name</label>
-            <input type="text" class="form-control" id="firstname" name="firstname">        
+            <input type="text" class="form-control" value="<?php echo $attendee['firstname'] ?>" id="firstname" name="firstname">        
         </div>
         <div class="mb-3">
             <label for="lastname" class="form-label">Last Name</label>
-            <input type="text" class="form-control" id="lastname" name="lastname">        
+            <input type="text" class="form-control" value="<?php echo $attendee['lastname'] ?>" id="lastname" name="lastname">        
         </div>
         <div class="mb-3">
             <label for="dob" class="form-label">Date Of Birth</label>
-            <input type="date" class="form-control" id="dob" name="dob">        
+            <input type="date" class="form-control" value="<?php echo $attendee['dateofbirth'] ?>" id="dob" name="dob">        
         </div>
         <div class="mb-3">
             <label for="specialty" class="form-label">Area of Expertise</label>
-            <select class="form-select" id="specialty" name="specialty">
+            <select class="form-select" value="<?php echo $attendee['specialty'] ?>" id="specialty" name="specialty">
                 <?php while ($r = $results->fetch(PDO::FETCH_ASSOC)) { ?>
-                    <option value="<?php echo $r['specialty_id'] ?>"><?php echo $r['name']?></option>
-
+                    <option selected value="<?php echo $r['specialty_id'] ?>" <?php if($r['specialty_id']
+                    == $attendee['specialty_id']) echo 'selected' ?>>
+                        <?php echo $r['name']?>
+                    </option>
                 <?php } ?>
             </select>       
         </div>
         <div class="mb-3">
             <label for="email" class="form-label">Email address</label>
-            <input type="text" class="form-control" id="email" name="email" aria-describedby="emailHelp">
+            <input type="text" class="form-control" value="<?php echo $attendee['emailaddress'] ?>" id="email" name="email" aria-describedby="emailHelp">
             <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
         </div>
         <div class="mb-3">
             <label for="phone" class="form-label">Contact Number</label>
-            <input type="text" class="form-control" id="phone" name="phone" aria-describedby="phoneHelp">
+            <input type="text" class="form-control"  value="<?php echo $attendee['contactnumber'] ?>" id="phone" name="phone" aria-describedby="phoneHelp">
             <div id="phone" class="form-text">We'll never share your number with anyone else.</div>
         </div>
  
