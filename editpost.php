@@ -1,9 +1,9 @@
 <?php 
-    $title = 'Success';
-    require_once "includes/header.php"; 
+    
     require_once "db/conn.php";
-
+    //Get values from post operation
     if(isset($_POST['submit'])){
+        //extract valuesa from $_POST array
         $id = $_POST['id'];
         $fname = $_POST['firstname'];
         $lname = $_POST['lastname'];
@@ -11,10 +11,19 @@
         $email = $_POST['email'];
         $contact = $_POST['phone'];
         $specialty = $_POST['specialty'];
+
+        //Call Crud  function
+        $result = $crud->editAttendee($id,$fname, $lname, $dob, $email, $contact, $specialty);
+
+        //Redirect to index.php
+        if($result){
+            header( "Location: index.php");
+        }
+        else{
+            echo 'error';
+        }
     }
     else{
-        
+        echo 'error';
     }
 ?>
-
-<?php require_once "includes/footer.php"; ?>
