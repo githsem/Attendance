@@ -32,12 +32,22 @@
             $result = $this->db->query($sql);
             return $result;
         }
+        
+        public function getAttendeesDetails($id){
+            $sql = "select * from atendee where attende_id = :id";
+            $stmt = $this->db->prepare($sql);
+            $stmt->bindparam(':id',$id);
+            $result = $stmt->execute();
+        }
+        
 
         public function getSpecialties(){
             $sql = "SELECT * FROM `specialties` ";
             $result = $this->db->query($sql);
             return $result;
         }
+
+        
 
 
     }
