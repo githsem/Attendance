@@ -17,19 +17,19 @@
 <div class="card" style="width: 18rem;">
         <div class="card-body">
             <h5 class="card-title">
-                <?php echo $_POST['firstname'] . ' ' .$_POST['lastname'];  ?>
+                <?php echo $result['firstname'] . ' ' .$result['lastname'];  ?>
             </h5>
             <h6 class="card-subtitle mb-2 text-muted">
-                <?php echo $_POST['specialty'];  ?>
+                <?php echo $result['specialty'];  ?>
             </h6>
             <p class="card-text">
-                Date Of Birth : <?php echo $_POST['dob'];  ?>
+                Date Of Birth : <?php echo $result['dob'];  ?>
             </p>
             <p class="card-text">
-                Email Adress : <?php echo $_POST['email'];  ?>
+                Email Adress : <?php echo $result['email'];  ?>
             </p>
             <p class="card-text">
-                Contact Number : <?php echo $_POST['phone'];  ?>
+                Contact Number : <?php echo $result['phone'];  ?>
             </p>
         </div>
     </div>    
