@@ -17,7 +17,8 @@
     <h1 class="text-center">Edit Record</h1>
 
     
-    <form method = "post" action="success.php">
+    <form method = "post" action="editpost.php">
+    <input type="hidden" name="id" value = "<?php echo $attendee['attendee_id'] ?>" />
         <div class="mb-3">
             <label for="firstname" class="form-label">First Name</label>
             <input type="text" class="form-control" value="<?php echo $attendee['firstname'] ?>" id="firstname" name="firstname">        
@@ -34,7 +35,7 @@
             <label for="specialty" class="form-label">Area of Expertise</label>
             <select class="form-select" value="<?php echo $attendee['specialty'] ?>" id="specialty" name="specialty">
                 <?php while ($r = $results->fetch(PDO::FETCH_ASSOC)) { ?>
-                    <option selected value="<?php echo $r['specialty_id'] ?>" <?php if($r['specialty_id']
+                    <option value="<?php echo $r['specialty_id'] ?>" <?php if($r['specialty_id']
                     == $attendee['specialty_id']) echo 'selected' ?>>
                         <?php echo $r['name']?>
                     </option>
