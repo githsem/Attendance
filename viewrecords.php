@@ -28,7 +28,7 @@
             <td><?php  echo $r['emailaddress']?></td>
             <td><?php  echo $r['contactnumber']?></td>
             <td><?php  echo $r['name']?></td>
-            <td><a href="view.php" class = ""></a></td>
+            <td><a href="view.php" class = "btn btn-primary">View</a></td>
         </tr>
 
     <?php } ?>
