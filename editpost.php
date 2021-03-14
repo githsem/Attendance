@@ -17,7 +17,7 @@
 
         //Redirect to index.php
         if($result){
-            header( "Location: index.php");
+            header( "Location: viewrecords.php");
         }
         else{
             echo 'error';
