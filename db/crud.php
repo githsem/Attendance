@@ -34,7 +34,7 @@
         }
         
         public function getAttendeesDetails($id){
-            $sql = "select * from attendee where attende_id = :id";
+            $sql = "select * from attendee where attendee_id = :id";
             $stmt = $this->db->prepare($sql);
             $stmt->bindparam(':id',$id);
             $result = $stmt->execute();
