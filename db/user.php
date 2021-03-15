@@ -11,7 +11,7 @@
         public function insertUser($username, $password){
             try {
                 $result = $this->getUserbyUsername($username);
-                if($result(["num"]>0)){
+                if($result['num']>0){
                     return false;
                 }
                 else{
@@ -20,7 +20,7 @@
                
                     $stmt = $this->db->prepare($sql);
 
-                    $stmt->bindparam(':usernam',$username);
+                    $stmt->bindparam(':username',$username);
                     $stmt->bindparam(':password',$new_password);
                     
                     $stmt->execute();
