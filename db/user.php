@@ -10,15 +10,21 @@
 
         public function insertUser($username, $password){
             try {
-                $sql = "INSERT INTO users (username,password)  VALUES (:username,:password)";
+                $result = $this->getUserbyUsername($username);
+                if($result(["num"]>0)){
+                    return false;
+                }
+                else{
+                    $sql = "INSERT INTO users (username,password)  VALUES (:username,:password)";
                
-                $stmt = $this->db->prepare($sql);
+                    $stmt = $this->db->prepare($sql);
 
-                $stmt->bindparam(':usernam',$username);
-                $stmt->bindparam(':password',$password);
-                
-                $stmt->execute();
-                return true;
+                    $stmt->bindparam(':usernam',$username);
+                    $stmt->bindparam(':password',$password);
+                    
+                    $stmt->execute();
+                    return true;
+                }
 
             } catch (PDOException $e) {
                 echo $e->getMessage();
