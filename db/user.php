@@ -15,6 +15,7 @@
                     return false;
                 }
                 else{
+                    $new_password = md5($password.$username);
                     $sql = "INSERT INTO users (username,password)  VALUES (:username,:password)";
                
                     $stmt = $this->db->prepare($sql);
