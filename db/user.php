@@ -21,7 +21,7 @@
                     $stmt = $this->db->prepare($sql);
 
                     $stmt->bindparam(':usernam',$username);
-                    $stmt->bindparam(':password',$password);
+                    $stmt->bindparam(':password',$new_password);
                     
                     $stmt->execute();
                     return true;
