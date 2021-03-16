@@ -6,6 +6,15 @@
 
     if($_SERVER['REQUEST_METHOD']=='POST'){
         $username= strtolower(trim($_POST['username']));
+        $password = $_POST['password'];
+        $new_password = md5($password.$username);
+
+        $result = $user->getUser($username,$new_password);
+        if(!$result){
+            echo '<div class = "alert alert-danger">Username or Password is Incorrect! Please try again.</div>';
+        }else{
+            $_SESSION['username'] = $username;
+        }
     }
 
 ?>
