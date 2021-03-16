@@ -4,7 +4,7 @@
     require_once "includes/header.php";
     require_once 'db/conn.php'; 
 
-    if($_SERVER['REQUEST_METHOD']=='POST'){
+    if($_SERVER['REQUEST_METHOD'] =='POST'){
         $username= strtolower(trim($_POST['username']));
         $password = $_POST['password'];
         $new_password = md5($password.$username);
@@ -14,6 +14,8 @@
             echo '<div class = "alert alert-danger">Username or Password is Incorrect! Please try again.</div>';
         }else{
             $_SESSION['username'] = $username;
+            $_SESSION['id'] = $result['id'];
+            header("Location: viewrecords.php");
         }
     }
 
