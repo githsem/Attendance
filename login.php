@@ -17,6 +17,9 @@
         <td><input type="password" name="password" class="form-control" id="password"> </td>
     </tr>
     </table><br><br>
+
+    <div class="d-grid gap-2">
     <input type="submit" value="login" class = "btn btn-primary btn-block"><br>
+    </div>
     <a href="#">Forgot Password</a>
 </form>
