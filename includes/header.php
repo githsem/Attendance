@@ -38,9 +38,20 @@
             </li>
           </ul>
           <ul class="navbar-nav  ml-auto">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="login.php">Login</a>
-            </li>
+            <?php 
+              if (!isset($_SESSION['userid'])){
+            ?>
+
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="login.php">Login</a>
+              </li>
+              <?php } else {?>
+                <li class="nav-item">
+                <span>Hello <?php echo $_SESSION['username'] ?>!</span>
+                <a class="nav-link active" aria-current="page" href="logout.php">Logout</a>
+              </li>
+              <?php } ?>
+
           </ul>
         </div>
       </div>
