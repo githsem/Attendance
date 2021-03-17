@@ -43,6 +43,10 @@
             <input type="text" class="form-control" id="phone" name="phone" aria-describedby="phoneHelp">
             <div id="phone" class="form-text">We'll never share your number with anyone else.</div>
         </div>
+        <div class="custom-file">
+            <input type="file" class="custom-file-input" id="phone" name="avatar" >
+            <label class="custom-file-label" >Choose File</label>
+        </div>
  
         <div class="d-grid gap-2">
             <button class="btn btn-primary" type="submit" name="submit">Submit</button>
