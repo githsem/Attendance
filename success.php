@@ -11,9 +11,10 @@
         $contact = $_POST['phone'];
         $specialty = $_POST['specialty'];
 
-        $orig_file = $FILES["avatar"]["tmp_name"];
+        $orig_file = $_FILES["avatar"]["tmp_name"];
+        $ext = pathinfo($_FILES["avatar"]["tmp_name"],PATHINFO_EXTENSION);
         $target_dir = 'uploads/';
-        $destination = $target_dir . basename($_FILES["avatar"]["name"]);
+        $destination = "$target_dir$contact.$ext"; 
         move_uploaded_file($orig_file,$destination);
 
         exit();
