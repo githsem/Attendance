@@ -46,7 +46,7 @@
         <div class="custom-file">
             <input type="file" class="custom-file-input" id="phone" name="avatar" >
             <label class="custom-file-label" for="avatar" >Choose File</label>
-            <small id="avatar" class="form-text text-warning"></small>
+            <small id="avatar" class="form-text text-warning">File Upload is Optional</small>
         </div>
  
         <div class="d-grid gap-2">
