@@ -11,11 +11,11 @@
         $contact = $_POST['phone'];
         $specialty = $_POST['specialty'];
 
-        $orig_file = $FILES['avatar']["name"];
+        $orig_file = $FILES["avatar"]["tmp_name"];
         $target_dir = 'uploads/';
-        $destination = $target_dir . basename($_FILES['avatar']['name']);
+        $destination = $target_dir . basename($_FILES["avatar"]["name"]);
         move_uploaded_file($orig_file,$destination);
-        
+
         exit();
 
         $isSuccess = $crud->insertAttendees($fname,$lname,$dob,$email,$contact,$specialty);
