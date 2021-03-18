@@ -45,9 +45,8 @@
         </div>
         
         <div class="custom-file">
-            <input type="file" accept="image/*" class="custom-file-input" id="avatar" name="avatar" >
+            <input type="file" accept="image/*" class="custom-file-input" id="avatar" name="avatar">
             <label class="custom-file-label" for="avatar">Choose File</label>
-            <small id="avatar" class="form-text text-danger">File Upload is Optional</small>
         </div>
  
         <div class="d-grid gap-2">
