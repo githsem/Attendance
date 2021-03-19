@@ -12,7 +12,6 @@
         $id = $_GET['id'];
         $result = $crud->getAttendeeDetails($id);  
     
-    
 ?>
 <div class="card" style="width: 18rem;">
         <div class="card-body">
