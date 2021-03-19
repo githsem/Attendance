@@ -19,9 +19,6 @@
             move_uploaded_file($orig_file,$destination);
         }
        
-        
-
-
         $isSuccess = $crud->insertAttendees($fname,$lname,$dob,$email,$contact,$specialty);
     
 
