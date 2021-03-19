@@ -6,11 +6,8 @@
 
     $results = $crud->getSpecialties();
 ?>
-
-
     <h1 class="text-center">Registration for IT Conference</h1>
-
-    
+ 
     <form method = "post" action="success.php">
         <div class="mb-3">
             <label for="firstname" class="form-label">First Name</label>
@@ -53,8 +50,6 @@
             <button class="btn btn-primary" type="submit" name="submit">Submit</button>
         </div>
     </form>
-
-    
 
 <?php require_once "includes/footer.php"; ?>    
     
